@@ -120,7 +120,7 @@ The full report can be accessed at https://drive.google.com/file/d/1FjAHQKGxpaWN
   heroku login
 ```
 - Delete yarn.lock file.
-- Run the following commmands in the terminal opened in the client folder-
+- Run the following commands in the terminal opened in the client folder-
 ```bash
   git init
   git add .
