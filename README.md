@@ -107,7 +107,7 @@ The full report can be accessed at https://drive.google.com/file/d/1FjAHQKGxpaWN
 
 ### Deploying client folder
 - Ensure that client folder has .gitignore file with .env & node_modules added to avoid these files to be pushed on the hosting provider server.
-- Create a Heroku account and create a new app on it. Go to app settings and in Config Vars add the url of the heroku app created for the server above and add /api at the end of the URL(example https://abcdefghij.herokuapp.com/api). This tells the API location of your web app to Heroku. Add the follwing key value in Config Vars-
+- Create a Heroku account and create a new app on it. Go to app settings and in Config Vars add the url of the heroku app created for the server above and add /api at the end of the URL(example https://abcdefghij.herokuapp.com/api). This tells the API location of your web app to Heroku. Add the follwing key value pair in Config Vars-
 ```bash
   REACT_APP_API=<URL of the deployed new app of server>/api
 ```
