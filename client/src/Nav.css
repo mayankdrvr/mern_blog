@@ -1,0 +1,14 @@
+.nav .nav-tabs .nav-item {
+  color: rgba(238, 190, 58, 0.972);
+}
+
+Link {
+  color: rgba(238, 190, 58, 0.972);
+}
+.nav-tabs {
+  color: red !important;
+  border-bottom: rgba(238, 190, 58, 0.972);
+}
+.nav-item > a {
+  color: rgba(238, 190, 58, 0.972);
+}
