@@ -11,7 +11,7 @@ Project Specifications-
 
 # Demo
 
-![react-portfolio-mayank](https://user-images.githubusercontent.com/87348490/149490187-69ccd48c-9871-4fd0-8a6d-ad8babcd04bd.gif)
+
 
 ## Technologies Used
 
@@ -27,14 +27,11 @@ Project Specifications-
 
 ## Google Lighthouse webpage perfomance report 
 
-The full report can be accessed at https://drive.google.com/file/d/18R8RN0lhhP77NQzVeVURn5bFSIUpJjR0/view?usp=sharing
-
-![react-portfolio-mayank](https://user-images.githubusercontent.com/87348490/149520217-e1309919-56a3-4c52-83df-787ad0b15fc4.png)
+The full report can be accessed at 
 
 ## Lessons Learned
 
-- Making website responsive using media queries & CSS Grid properties like flex. 
-- Creating single page application & deployment on Netlify.
+- 
 
 ## Known Issues
 
