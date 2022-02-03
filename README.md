@@ -93,7 +93,7 @@ The full report can be accessed at https://drive.google.com/file/d/1FjAHQKGxpaWN
   git init
   git add .
   git commit -m "first commit"
-  heroku git:remote -a <Name of the nnew app created by you on Heroku>
+  heroku git:remote -a <Name of the new app created by you on Heroku>
   git push heroku master
 ```
 - Wait for a while for server folder files to deploy. If any error, then retry using 
@@ -106,8 +106,11 @@ The full report can be accessed at https://drive.google.com/file/d/1FjAHQKGxpaWN
 ```
 
 ### Deploying client folder
-- Ensure that client folder has .gitignore file with .env & node_modules added to avoid these files to be pushed on hosting provider server.
-- Create a Heroku account and create a new app on it. Go to app settings and in Config Vars add the url of the heroku app created for the server above and add /api at the end of the URL. This sets API location of your web app to Heroku.
+- Ensure that client folder has .gitignore file with .env & node_modules added to avoid these files to be pushed on the hosting provider server.
+- Create a Heroku account and create a new app on it. Go to app settings and in Config Vars add the url of the heroku app created for the server above and add /api at the end of the URL(example https://abcdefghij.herokuapp.com/api). This tells the API location of your web app to Heroku. Add the follwing key value in Config Vars-
+```bash
+  REACT_APP_API=<URL of the deployed new app of server>/api
+```
 - Create a fie named Procfile in the client folder with the following contents-
 ```bash
   web: node server.js
@@ -117,12 +120,12 @@ The full report can be accessed at https://drive.google.com/file/d/1FjAHQKGxpaWN
   heroku login
 ```
 - Delete yarn.lock file.
-- Run thr following commmands in the terminal ope in the client folder-
+- Run the following commmands in the terminal opened in the client folder-
 ```bash
   git init
   git add .
   git commit -m "first commit"
-  heroku git:remote -a <Name of the nnew app created for client side by you on Heroku>
+  heroku git:remote -a <Name of the new app created for client side by you on Heroku>
   git push heroku master
   heroku open
 ```
