@@ -1,17 +1,16 @@
 # ValueBlog
 
-My first attempt at my web development responsive portfolio website in React JS. The objective of this project was to learn React JS. This project is hosted live on https://react-portfolio-mayank.netlify.app/
+This is a full stack MERN blog web application. Only admin has access to add, update & delete new blog post. Rich text editor feature eanbles us to edit text & add hyperlinks, images, videos etc. This project is hosted live on https://mern-valueblog.herokuapp.com/
 
 Project Specifications-
-- Fully responsive web application using media queries.
-- Displays Home, About, Projects, Resume and Contact sections.
-- Projects section has information on technologies used and links to source code and deployed URL.
-- Contact section has github & linkedin profiles link along with link to directly open the compose email section of the site administrator's gmail account.
-- About section has links to various online programming profiles.
+- Fully responsive web application.
+- Displays all published blog posts on home page with author, date & time of blog post creation.
+- Admin can create/update/delete any blog post with full rich text editor features.
+- Login screen with username=<Choose any username> and password=qwerty
 
 # Demo
 
-
+  ![ezgif com-gif-maker (3)](https://user-images.githubusercontent.com/87348490/152381000-5f57b062-377c-48e2-acbc-ec0778422159.gif)
 
 ## Technologies Used
 
@@ -27,7 +26,9 @@ Project Specifications-
 
 ## Google Lighthouse webpage perfomance report 
 
-The full report can be accessed at 
+The full report can be accessed at https://drive.google.com/file/d/1FjAHQKGxpaWNOnO-fvSuU2OLNjnIS3re/view?usp=sharing
+  
+![valueblog](https://user-images.githubusercontent.com/87348490/152341465-c7c99654-58b2-4da9-983a-435329e71771.png)
 
 ## Lessons Learned
 
