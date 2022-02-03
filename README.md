@@ -3,10 +3,10 @@
 This is a full stack MERN blog web application. Only admin has access to add, update & delete new blog post. Rich text editor feature eanbles us to edit text & add hyperlinks, images, videos etc. This project is hosted live on https://mern-valueblog.herokuapp.com/
 
 Project Specifications-
-- Fully responsive web application.
+- Fully responsive web application with a distraction free interface.
 - Displays all published blog posts on home page with author, date & time of blog post creation.
-- Admin can create/update/delete any blog post with full rich text editor features.
-- Login screen with username=<Choose any username> and password=qwerty
+- Only admin can create/update/delete any blog post with full rich text editor features.
+- Users can see all blog posts in chronological order on the home screen.
 
 # Demo
 
@@ -32,7 +32,10 @@ The full report can be accessed at https://drive.google.com/file/d/1FjAHQKGxpaWN
 
 ## Lessons Learned
 
-- 
+- Used ReactQuill for text editing and adding images & video links to the content of the blog.
+- Designed routes using react-router-dom.
+- Learnt to test CRUD operations using Postman.
+- Deployed the full stack web app on Heroku using Git commands.
 
 ## Known Issues
 
@@ -40,7 +43,10 @@ The full report can be accessed at https://drive.google.com/file/d/1FjAHQKGxpaWN
 
 ## New Features to be added in Future
 
-- 
+- Allow guest users to create account.
+- Add search bar with filter to find a desired blog post.
+- Add tags to blogs and allow users to comment and upvote the blog post.
+- Add sharing options to share blog post on social media.
 
 ## Authors
 
@@ -65,8 +71,62 @@ The full report can be accessed at https://drive.google.com/file/d/1FjAHQKGxpaWN
 - Open http://localhost:3000/ to find the project running in your browser.
 
 ## Deployment on Heroku
+### Deloying server folder
+- Ensure that server folder has .gitignore file with .env & node_modules added to avoid these files to be pushed on hosting provider server.
+- Create a Heroku account and create two new apps on it, one for the client and one for the server. Go to app settings and in Config Vars add your MongoDB database link along with jwt secret key and login screen password=qwerty.
+```bash
+  DATABASE=<Your mongoDB database link>
+  JWT_SECRET=<Your jwt secret key>
+  PASSOWRD=qwerty
+```
+- Install Heroku CLI & create a file named Procfile in the server folder with the following contents-
+```bash
+  web: node server.js
+```
+- Login to Heroku in terminal from client
+```bash
+  heroku login
+```
+- Browser will open with a Login button. Click the Login button to login to Heroku from command line and close the window.
+- Go to the server folder and run the following commands one by one-
+```bash
+  git init
+  git add .
+  git commit -m "first commit"
+  heroku git:remote -a <Name of the nnew app created by you on Heroku>
+  git push heroku master
+```
+- Wait for a while for server folder files to deploy. If any error, then retry using 
+```bash
+  heroku ps:restart
+```
+- Find logs of any error using
+```bash
+  heroku logs --tail
+```
 
-- 
+### Deploying client folder
+- Ensure that client folder has .gitignore file with .env & node_modules added to avoid these files to be pushed on hosting provider server.
+- Create a Heroku account and create a new app on it. Go to app settings and in Config Vars add the url of the heroku app created for the server above and add /api at the end of the URL. This sets API location of your web app to Heroku.
+- Create a fie named Procfile in the client folder with the following contents-
+```bash
+  web: node server.js
+```
+- Login to Heroku in terminal from client
+```bash
+  heroku login
+```
+- Delete yarn.lock file.
+- Run thr following commmands in the terminal ope in the client folder-
+```bash
+  git init
+  git add .
+  git commit -m "first commit"
+  heroku git:remote -a <Name of the nnew app created for client side by you on Heroku>
+  git push heroku master
+  heroku open
+```
+- The full stack web app will be deployed and its link will open in your browser.
 
 ## License
 
