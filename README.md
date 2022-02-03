@@ -48,7 +48,7 @@ The full report can be accessed at
 ## Run on Local System
 
 - Go to Code->Download ZIP to download the .zip file. Just extract the .zip file and open the extracted folder in VS Code editor.
-- Open a new terminal in the root(../../mern-blog-main/) folder.
+- Open a new terminal in VS Code in the root(../../mern-blog-main/) folder.
 - To install client libraries & dependencies and run the frontend, run the following commands 
 ```bash
   cd client
