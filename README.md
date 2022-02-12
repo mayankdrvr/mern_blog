@@ -72,7 +72,7 @@ The full report can be accessed at https://drive.google.com/file/d/1FjAHQKGxpaWN
 
 ## Deployment on Heroku
 The web app frontend & backend will be deployed in two separate apps on Heroku. Frontend will have the backend api in its Config Vars on Heroku. So, two apps are created on Heroku, one for frontend and one for backend.
-### Deloying server folder
+### Deploying server folder
 - Ensure that server folder has .gitignore file with .env & node_modules added to avoid these files to be pushed on hosting provider server.
 - Create a Heroku account and create two new apps on it, one for the client and one for the server. Go to app settings and in Config Vars add your MongoDB database link along with jwt secret key and login screen password=qwerty.
 ```bash
