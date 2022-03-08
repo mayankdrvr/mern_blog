@@ -1,6 +1,9 @@
 # ValueBlog
 
-This is a full stack MERN blog web application. Only admin has access to add, update & delete new blog post. Rich text editor feature enables us to edit text & add hyperlinks, images, videos etc. This project is hosted live on https://mern-valueblog.herokuapp.com/
+This is an admin controlled full stack MERN blog web application. Only admin has access to add, update & delete new blog post. Rich text editor feature enables us to edit text & add hyperlinks, images, videos etc. This project is hosted live on https://mern-valueblog.herokuapp.com/
+
+Login Name-<Any Name>
+Password- qwerty
 
 Project Specifications-
 - Fully responsive web application.
