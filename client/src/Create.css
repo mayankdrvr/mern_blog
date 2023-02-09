@@ -1,0 +1,69 @@
+.form-control {
+  background-color: black;
+  border-color: rgba(238, 190, 58, 0.972);
+  color: rgba(238, 190, 58, 0.972);
+}
+.form-control:focus {
+  background-color: black;
+  color: rgba(238, 190, 58, 0.972);
+  border-color: rgba(238, 190, 58, 0.972);
+}
+.form-group > .text-muted {
+  color: rgba(238, 190, 58, 0.972);
+}
+.nav-tabs {
+  border-top: rgba(238, 190, 58, 0.972);
+}
+.ql-toolbar.ql-snow {
+  border: 1px solid rgba(238, 190, 58, 0.972);
+}
+.ql-editor.ql-blank {
+  background-color: black;
+  height: 400px !important;
+}
+.ql-editor {
+  height: 400px !important;
+}
+/* #ql-picker-options-38 {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+#ql-picker-options-37 {
+  background: transparent !important;
+  background-color: transparent !important;
+} */
+.ql-stroke {
+  stroke: rgba(214, 166, 34, 0.972);
+}
+.ql-toolbar.ql-snow {
+  background-color: rgba(238, 190, 58, 0.972) !important;
+}
+.ql-picker-item {
+  background-color: rgba(238, 190, 58, 0.972) !important;
+  border-color: rgba(238, 190, 58, 0.972) !important;
+  background: rgba(238, 190, 58, 0.972) !important;
+}
+.ql-snow .ql-picker-options {
+  background-color: rgba(238, 190, 58, 0.972) !important;
+}
+::after,
+::before {
+  color: black;
+}
+.text-muted {
+  color: rgba(238, 190, 58, 0.972) !important;
+  /* display: inline; */
+}
+.ql-editor > p {
+  height: 30px;
+}
+p {
+  display: inline;
+}
+/* .ql-color .ql-picker .ql-color-picker {
+  background: !important;
+  background-color:  !important;
+} */
+.ql-snow a {
+  color: rgba(85, 171, 228, 0.972);
+}

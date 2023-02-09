@@ -1,0 +1,17 @@
+.container {
+  background-color: black;
+}
+
+h1 {
+  color: rgba(238, 190, 58, 0.972);
+}
+a {
+  color: rgba(238, 190, 58, 0.972);
+}
+a:hover {
+  color: rgba(238, 190, 58, 0.972);
+}
+.title,
+.tagline {
+  text-align: center;
+}
