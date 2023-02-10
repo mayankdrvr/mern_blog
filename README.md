@@ -143,17 +143,25 @@ The web app frontend & backend will be deployed in two separate apps on Heroku. 
 The web app frontend & backend will be deployed in two separate apps on Render. Frontend will have the backend api in its Config Vars on Render. So, two apps are created on Render, one for frontend and one for backend.
 
 ### Deploying server folder
-- Download the entire code of this project and create a Github repository and push the entire code in it. Create an account on Render and connect your Github account and connect all repositories(recommended) in it. Go to Render dashboard and select New->Web Service. Select the respective repository and click Connect. In the Build & Deploy section, enter the following commands-
+- Download the entire code of this project and create a Github repository and push the entire code in it.
+- Create an account on Render and connect your Github account and connect all repositories(recommended) in it. 
+- Go to Render dashboard and select New->Web Service. 
+- Select the respective repository and click Connect. 
+- In the Build & Deploy section, enter the following commands-
+```
   Name - <Your desired domain name> 
   Root Directory - server
   Build Command - npm install
   Start Command - npm start
+```
  Click Create Web Service
  It will take some time to deploy the backend server. Copy the URL(onrender.com extension) of the deployed backend server. In the left part of the screen, click on Environment and enter the following details-
+```
   DATABASE=<Your mongoDB database link>
   JWT_SECRET=<Your jwt secret key>
   PASSOWRD=<Your desired admin password>
- 
+``` 
+
 ### Deploying client folder
 - Open the downloaded project on your local system in VS Code. 
 - Go to Code->Download ZIP to download the .zip file. Just extract the .zip file and open the extracted folder in VS Code editor.
@@ -174,10 +182,12 @@ npm run build
 This will create a build folder in client folder. Push this in client folder in your respective Github repository.
 - Go to the Render dashboard and click New->Static Site. Choose the respective repository and click Connect.
 - In the Build & Deploy section, enter the following commands-
+```
   Name - <Your desired domain name> 
   Root Directory - client
   Build Command - npm build
   Publish directory - build
+```
 Click Create Static Site
 In the left part of the screen, click on Environment and enter the following key value pair-
 ```
