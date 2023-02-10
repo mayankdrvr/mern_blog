@@ -155,7 +155,9 @@ The web app frontend & backend will be deployed in two separate apps on Render. 
   Start Command - npm start
 ```
  Click Create Web Service
- It will take some time to deploy the backend server. Copy the URL(onrender.com extension) of the deployed backend server. In the left part of the screen, click on Environment and enter the following details-
+ - It will take some time to deploy the backend server. 
+ - Copy the URL(onrender.com extension) of the deployed backend server. 
+ - In the left part of the screen, click on Environment and enter the following details-
 ```
   DATABASE=<Your mongoDB database link>
   JWT_SECRET=<Your jwt secret key>
