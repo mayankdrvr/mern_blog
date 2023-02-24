@@ -32,7 +32,7 @@ Project Specifications-
 
 ## Google Lighthouse webpage perfomance report 
 
-The full report can be accessed at 
+The full report can be accessed at https://drive.google.com/file/d/1FjAHQKGxpaWNOnO-fvSuU2OLNjnIS3re/view?usp=share_link
   
 ![valueblog](https://user-images.githubusercontent.com/87348490/152341465-c7c99654-58b2-4da9-983a-435329e71771.png)
 
