@@ -28,31 +28,18 @@ Project Specifications-
 <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a>
 <a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> 
 <a href="https://postman.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40"/> </a>
-<a href="https://heroku.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/heroku/heroku-icon.svg" alt="heroku" width="40" height="40"/> </a> 
+<a href="https://render.com" target="_blank" rel="noreferrer"> <img src="https://upload.vectorlogo.zone/logos/render/images/bb711e6b-3dc7-496f-b665-10558e88ceed.svg" alt="render" width="40" height="40"/> </a>
 
 ## Google Lighthouse webpage perfomance report 
 
-The full report can be accessed at https://drive.google.com/file/d/1FjAHQKGxpaWNOnO-fvSuU2OLNjnIS3re/view?usp=sharing
+The full report can be accessed at 
   
 ![valueblog](https://user-images.githubusercontent.com/87348490/152341465-c7c99654-58b2-4da9-983a-435329e71771.png)
 
-## Lessons Learned
-
-- Used ReactQuill for text editing and adding images & video links to the content of the blog.
-- Designed routes using react-router-dom.
-- Learnt to test CRUD operations using Postman.
-- Deployed the full stack web app on Heroku using Git commands.
-
-## Known Issues
-
-- Rich Text Editor has text color & text background color feature working but the color palette is showing a single color throughout the palette. This is due to CSS color properties set in the root class which has taken precedence over the local properties.
-
 ## New Features to be added in Future
 
-- Allow guest users to create account.
-- Add search bar with filter to find a desired blog post.
-- Add tags to blogs and allow users to comment and upvote the blog post.
-- Add sharing options to share blog post on social media.
+- Send notifications to user email inbox.
+- Add more data visualization features.
 
 ## Authors
 
@@ -61,12 +48,22 @@ The full report can be accessed at https://drive.google.com/file/d/1FjAHQKGxpaWN
 ## Run on Local System
 
 - Go to Code->Download ZIP to download the .zip file. Just extract the .zip file and open the extracted folder in VS Code editor.
-- Open a new terminal in VS Code in the root(../../mern-blog-main/) folder.
+- Add .env and .gitignore file in client, server and root(main) folders. Add .env and node_modules in all .gitignore files.
+- Open a new terminal in VS Code in the root(../../my-career-progress/) folder.
 - To install client libraries & dependencies and run the frontend, run the following commands 
 ```bash
   cd client
   npm install
   npm start
+```
+Frontend will run on localhost:3000
+### Add Environment variables in server folder 
+- In .env file of server folder, add the following key value pairs 
+```bash
+PORT=5000
+MONGO_URL=<Your MongoDB connection string>
+JWT_LIFETIME=<Your jwt key>
+JWT_SECRET=<Your jwt key>
 ```
 - To install server libraries & dependencies and run the backend, run the following commands 
 ```bash
@@ -74,73 +71,25 @@ The full report can be accessed at https://drive.google.com/file/d/1FjAHQKGxpaWN
   npm install
   npm start
 ```
+Backend will run on localhost:5000
+
 - Open http://localhost:3000/ to find the project running in your browser.
 
-## Deployment on Heroku
-The web app frontend & backend will be deployed in two separate apps on Heroku. Frontend will have the backend api in its Config Vars on Heroku. So, two apps are created on Heroku, one for frontend and one for backend.
-### Deploying server folder
-- Ensure that server folder has .gitignore file with .env & node_modules added to avoid these files to be pushed on hosting provider server.
-- Create a Heroku account and create two new apps on it, one for the client and one for the server. Go to app settings and in Config Vars add your MongoDB database link along with jwt secret key and login screen password=qwerty.
+# Production Setup(Before Deployment)
+- Remove node_modules and build folder from client, server and root folders. Do not remove any package-lock.json files.
+- In root folder package.json file in "scripts" field, add the following key-value pairs
 ```bash
-  DATABASE=<Your mongoDB database link>
-  JWT_SECRET=<Your jwt secret key>
-  PASSOWRD=qwerty
+ "install-client": "npm install --prefix client"
+ "setup-production": "npm run install-client && npm run build-client && npm install"
 ```
-- Install Heroku CLI & create a file named Procfile in the server folder with the following contents-
-```bash
-  web: node server.js
+In root folder, run these command one by one in terminal-
 ```
-- Login to Heroku in terminal from client
-```bash
-  heroku login
+npm run setup-production
+npm server
 ```
-- Browser will open with a Login button. Click the Login button to login to Heroku from command line and close the window.
-- Go to the server folder and run the following commands one by one-
-```bash
-  git init
-  git add .
-  git commit -m "first commit"
-  heroku git:remote -a <Name of the new app created by you on Heroku>
-  git push heroku master
-```
-- Wait for a while for server folder files to deploy. If any error, then retry using 
-```bash
-  heroku ps:restart
-```
-- Find logs of any error using
-```bash
-  heroku logs --tail
-```
-
-### Deploying client folder
-- Ensure that client folder has .gitignore file with .env & node_modules added to avoid these files to be pushed on the hosting provider server.
-- Create a Heroku account and create a new app on it. Go to app settings and in Config Vars add the url of the heroku app created for the server above and add /api at the end of the URL(example https://abcdefghij.herokuapp.com/api). This tells the API location of your web app to Heroku. Add the follwing key value pair in Config Vars-
-```bash
-  REACT_APP_API=<URL of the deployed new app of server>/api
-```
-- Create a fie named Procfile in the client folder with the following contents-
-```bash
-  web: node server.js
-```
-- Login to Heroku in terminal from client
-```bash
-  heroku login
-```
-- Delete yarn.lock file.
-- Run the following commands in the terminal opened in the client folder-
-```bash
-  git init
-  git add .
-  git commit -m "first commit"
-  heroku git:remote -a <Name of the new app created for client side by you on Heroku>
-  git push heroku master
-  heroku open
-```
-- The full stack web app will be deployed and its link will open in your browser.
-**************************************************************************************************
+Check localhost:5000 to see the production ready app working on local system
 
 ## Deployment on Render
-The web app frontend & backend will be deployed in two separate apps on Render. Frontend will have the backend api in its Environment Variables on Render. So, two apps are created on Render, one for frontend and one for backend.
 
 ### Deploying server folder
 - Download the entire code of this project and create a Github repository and push the entire code in it.
@@ -150,6 +99,7 @@ The web app frontend & backend will be deployed in two separate apps on Render. 
 - In the Build & Deploy section, enter the following commands-
 ```
   Name - <Your desired domain name> 
+  Branch - main
   Root Directory - server
   Build Command - npm install
   Start Command - npm start
@@ -159,43 +109,13 @@ The web app frontend & backend will be deployed in two separate apps on Render. 
  - Copy the URL(onrender.com extension) of the deployed backend server. 
  - In the left part of the screen, click on Environment and enter the following details-
 ```
-  DATABASE=<Your mongoDB database link>
-  JWT_SECRET=<Your jwt secret key>
-  PASSOWRD=<Your desired admin password>
+PORT=<The onrender.com URL you just copied>
+MONGO_URL=<Your MongoDB connection string>
+JWT_LIFETIME=<Your jwt key>
+JWT_SECRET=<Your jwt key>
 ``` 
 
-### Deploying client folder
-- Open the downloaded project on your local system in VS Code. 
-- Go to Code->Download ZIP to download the .zip file. Just extract the .zip file and open the extracted folder in VS Code editor.
-- Open a new terminal in VS Code in the root(../../mern-blog-main/) folder.
-- To install client libraries & dependencies, run the following commands 
-```bash
-  cd client
-  npm install
-```
-- Create a .env file in the client folder and paste the URL(onrender.com extension) of the deployed backend server which you deployed and add /api in it-
-```
-REACT_APP_API = <URL(onrender.com extension) of the deployed backend server which you deployed>/api
-```
-Run this command in the terminal-
-```
-npm run build
-```
-This will create a build folder in client folder. Push this in client folder in your respective Github repository.
-- Go to the Render dashboard and click New->Static Site. Choose the respective repository and click Connect.
-- In the Build & Deploy section, enter the following commands-
-```
-  Name - <Your desired domain name> 
-  Root Directory - client
-  Build Command - npm build
-  Publish directory - build
-```
-Click Create Static Site.
-- In the left part of the screen, click on Environment and enter the following key value pair-
-```
-REACT_APP_API = <URL(onrender.com extension) of the deployed backend server which you deployed>/api
-```
-- The full stack web app will be fully deployed in less than five minutes time and the frontend URL will be displayed.
+- The full stack web app will be fully deployed in less than five minutes time on the given URL.
 
 ## License
 
