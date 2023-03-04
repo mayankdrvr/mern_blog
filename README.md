@@ -6,7 +6,7 @@ UPDATE 10 Feb 2023: The site is live on https://mern-blog-3gnt.onrender.com/
 Wait for a few seconds for the site to load. If the site features are not working, keep refreshing the page and clearing the browser cache and trying again. These issues are from https://render.com/ free plan as they were not there when the site was live on Heroku free plan.
 
 Login Name- Your name <br />
-Admin Password- <Only admin knows the passsword for security reasons>
+Admin Password- Only admin knows the passsword for security reasons
 
 Project Specifications-
 - Fully responsive web application.
