@@ -1,9 +1,9 @@
 # ValueBlog
 
-This is an admin controlled full stack MERN blog web application. Only admin has access to add, update & delete new blog post. Rich text editor feature enables us to edit text & add hyperlinks, images, videos etc. This project was hosted on Heroku with free plan but Heroku no longer supports free full stack web hosting. So, i am currently working on deploying it on some other free full stack web hosting platform. 
+This is an admin controlled full stack MERN blog web application. Only admin has access to add, update & delete new blog post. Rich text editor feature enables us to edit text & add hyperlinks, images, videos etc.
 
 UPDATE 10 Feb 2023: The site is live on https://mern-blog-3gnt.onrender.com/
-Wait for a few seconds for the site to load. If the site features are not working, keep refreshing the page and clearing the browser cache and trying again. These issues are from https://render.com/ free plan as they were not there when the site was live on Heroku free plan.
+Wait for a few seconds for the site to load. If the site features are not working, keep refreshing the page and clearing the browser cache and trying again. 
 
 Login Name- Your name <br />
 Admin Password- Only admin knows the passsword for security reasons
